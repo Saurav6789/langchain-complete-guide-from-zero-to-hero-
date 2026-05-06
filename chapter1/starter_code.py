@@ -24,7 +24,7 @@ def get_stock_news(symbol: str) -> str:
 # Direct model call with tools + clear instructions
 model = ChatOllama(model="qwen2.5-coder")
 
-# Pre-execute tools for demo clarity
+# Execute tools for demo clarity
 price = get_stock_price.invoke({"symbol": "AAPL"})
 news = get_stock_news.invoke({"symbol": "AAPL"})
 
