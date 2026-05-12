@@ -1,0 +1,21 @@
+LangChain is a framework for building applications powered by large language models (LLMs).
+
+It helps developers connect LLMs with:
+- External tools
+- APIs
+- Databases
+- Memory systems
+- Retrieval pipelines
+
+LangChain simplifies the development of:
+- AI chatbots
+- RAG applications
+- AI agents
+- Workflow automation systems
+
+Popular integrations include:
+- OpenAI
+- Ollama
+- Hugging Face
+- Pinecone
+- ChromaDB
