@@ -1,0 +1,15 @@
+Large Language Models process text as tokens rather than characters. A token can be a word, part of a word, or even punctuation depending on the tokenizer.
+
+When building applications with LLMs, it is important to understand token limits. Each model has a maximum number of tokens it can process in a single request, including both input and output tokens.
+
+Token-based splitting helps ensure that the input text fits within the model's limits. Instead of splitting by characters, we split based on how the model actually counts tokens.
+
+This becomes especially important in retrieval augmented generation systems. Documents are split into token-sized chunks, embedded, and stored in vector databases.
+
+When a query is made, the most relevant chunks are retrieved and passed to the model. If chunks are too large, they may exceed token limits. If too small, they may lose context.
+
+Choosing the right chunk size in tokens is crucial. It ensures a balance between context preservation and efficient retrieval.
+
+LangChain provides token-based splitters that use tokenizers compatible with LLMs. This allows developers to accurately control how text is chunked.
+
+In summary, token-based splitting is more aligned with how LLMs work internally, making it a better choice for production-grade applications.

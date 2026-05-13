@@ -1,0 +1,19 @@
+LangChain is a powerful framework designed to help developers build applications powered by large language models. It provides tools and abstractions that make it easier to integrate LLMs with external data sources, APIs, and custom logic.
+
+One of the key challenges in building LLM applications is handling large amounts of text data. Models typically have context window limits, which means they cannot process very large documents in a single request. This is where text splitting becomes essential.
+
+Text splitting is the process of breaking down large text into smaller chunks. These chunks can then be processed individually and later combined for tasks such as summarization, question answering, and retrieval augmented generation.
+
+There are multiple strategies for splitting text. A simple approach is character-based splitting, where the text is divided into chunks of a fixed number of characters. This is easy to implement but may break sentences in awkward places.
+
+Another approach is recursive text splitting, which tries to preserve semantic meaning by splitting based on paragraphs, sentences, or words. This produces more meaningful chunks and is often preferred for real-world applications.
+
+Chunk overlap is an important concept when splitting text. By overlapping chunks, we ensure that important context is not lost between chunks. For example, if a sentence is split across two chunks, overlap ensures that both chunks contain enough context to understand the meaning.
+
+In retrieval augmented generation (RAG), text splitting plays a crucial role. Documents are split into chunks, embedded into vector representations, and stored in a vector database. When a user asks a question, the most relevant chunks are retrieved and passed to the LLM.
+
+Choosing the right chunk size and overlap depends on the use case. Smaller chunks provide more precise retrieval but may lose context. Larger chunks preserve context but may include irrelevant information.
+
+LangChain provides multiple text splitters, including CharacterTextSplitter and RecursiveCharacterTextSplitter. These tools help developers experiment with different strategies and find the optimal configuration for their applications.
+
+In summary, text splitting is a foundational step in building scalable and efficient LLM applications. Understanding how to split text effectively can significantly improve the performance of downstream tasks such as search, summarization, and question answering.

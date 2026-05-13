@@ -1,0 +1,21 @@
+LangChain is an open-source framework designed to simplify building applications with large language models. It provides modular components that allow developers to combine LLMs with external tools, APIs, and data sources.
+
+One of the most important steps in building LLM applications is handling large text data. Since models have context limits, we cannot feed entire documents at once. Instead, we break them into smaller chunks.
+
+Text splitting helps us divide large text into manageable pieces. These pieces can then be used for downstream tasks such as summarization, question answering, and retrieval augmented generation.
+
+There are multiple ways to split text. A simple approach is character-based splitting, where text is divided into chunks of fixed size. However, this approach may break sentences in unnatural ways.
+
+Recursive text splitting is more intelligent. It tries to split text using a hierarchy of separators such as paragraphs, sentences, words, and characters. This ensures that chunks are as meaningful as possible.
+
+For example, the splitter first tries to split using paragraph breaks. If the chunk is still too large, it then splits using line breaks. If needed, it further splits by sentences, then words, and finally characters.
+
+This hierarchical strategy helps preserve semantic meaning. As a result, the chunks are more useful for applications like semantic search and retrieval.
+
+Chunk overlap is another important concept. By allowing overlap between chunks, we ensure that important context is not lost between them. This is especially useful when sentences span across chunk boundaries.
+
+In retrieval augmented generation, these chunks are converted into embeddings and stored in a vector database. When a user asks a question, the system retrieves the most relevant chunks and provides them to the language model.
+
+Choosing the right chunk size and overlap depends on the application. Smaller chunks improve precision, while larger chunks preserve context. Finding the right balance is key.
+
+Overall, recursive text splitting is a powerful technique for preparing text data. It enables developers to build more efficient and accurate LLM applications.
